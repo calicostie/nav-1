@@ -1,0 +1,161 @@
+/* css reset */
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* style */
+body {
+  background: #e5e5e5;
+}
+/* body的background属性，浏览器智能地给整个网页变色 */
+
+.globalHeader {
+  margin: 20px;
+  /* 左右边界都为20px，缩写成一个 */
+}
+.searchForm {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 500px) {
+  .globalHeader {
+    margin: 270px 0 70px;
+  }
+  .searchForm {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .siteList {
+    margin-left: 0;
+    margin-right: -25px;
+    justify-content: flex-start;
+  }
+  .siteList > li {
+    margin-right: 25px;
+  }
+}
+
+.searchForm > input {
+  width: 100%;
+  margin-right: 16px;
+  height: 36px;
+  padding: 0 10px;
+  /* border: none; */
+  /* 先覆盖默认边框样式，再加自己的样式 */
+  border: 1px solid black;
+  border-radius: 8px;
+  background: #e5e5e5;
+}
+.searchForm > button {
+  white-space: nowrap;
+  padding: 0 20px;
+  background: #079e68;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0px;
+}
+
+.globalMain {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.siteList {
+  margin: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.siteList > li {
+  margin-bottom: 10px;
+}
+.siteList .site {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  background: #e5e5e5;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+} /* 可跳过li直接写site的样式，因为此时不关心li */
+
+.siteList .site > .logo {
+  border-radius: 50%;
+  margin-top: 5px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.siteList .site > .link {
+  font-size: 13px;
+  margin-top: 0px;
+}
+.siteList .site > .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+  cursor: default;
+}
+.siteList .site:hover > .close {
+  display: block;
+}
+.siteList .addButton {
+  width: 96px;
+  height: 96px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  background: #e5e5e5;
+  margin-bottom: 10px;
+  border-radius: 6px;
+} /* 可跳过li直接写site的样式，因为此时不关心li */
+.siteList .addButton > .logo {
+  border-radius: 50%;
+  margin-top: 5px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  padding: 5px;
+}
+.siteList .addButton > .link {
+  font-size: 13px;
+  margin-top: 0px;
+}
+
+
+/*# sourceMappingURL=style.3f05afc5.css.map */
